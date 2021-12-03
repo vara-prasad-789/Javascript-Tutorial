@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript Reference</title>
+</head>
+<body>
+	<h1>Javascript Tutorial in One Page</h1>
+
+
+	<h1>Javascript Introduction</h1>
+	<p>JavaScript is the world's most popular programming language.<br>
+	JavaScript is the programming language of the Web.<br>
+	JavaScript is easy to learn.</p>
+
+	<h2>Did You Know?</h2>
+	<p>JavaScript and Java are completely different languages, both in concept and design.
+<br>
+JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.
+<br><br>
+ECMA-262 is the official name of the standard. ECMAScript is the official name of the language. </p>
+<h2>What JavaScript can Do ?</h2>
+	
+	<p id="one" >Javascript changing inner p element</p>
+	<button type="button" onclick='document.getElementById("one").innerHTML = "hello javascript"'>click</button>
+	
+	<p id="two" >Javascript can change size</p>
+	<button type="button" onclick="document.getElementById('two').style.fontSize='35px'"> click me</button>
+	
+	<p id="three"> Javascript can hide HTML elements</p>
+	<button type="button" onclick="document.getElementById('three').style.display='none'">click me</button>
+	<br>
+	
+	<p id="four" style="display: none"> JavaScript can show hidden HTML elements.</p>
+	<button type="button" onclick="document.getElementById('four').style.display='block'">click me</button>
+
+	<p id="five"></p>
+	<script> document.getElementById("five").innerHTML="My First Javascript"</script>
+
+	<p id="six"> A Paragraph (Javascript in Head)</p>
+	<button type="button" onclick="myFunction()"> Try It</button>
+
+	<p id="seven"> A Paragraph(Javascript in body)</p>
+	<button type="button" onclick="myFunction1()">Try It</button>
+	<script>
+	function myFunction1(){
+			document.getElementById("seven").innerHTML="Paragraph Changed.";}
+	</script>
+	<p><script >
+		document.write(5+6);
+	</script></p>
+
+	<p>Never call document.write after the document has finished loading.
+	It will overwrite the whole document.</p>
+	
+	<button type="button" onclick="document.write(5 + 6)">don't Try It</button>
+
+	<p id="eight"></p>
+	<script>
+	document.getElementById("eight").innerHTML = 5 + 6;
+	
+	</script>
+	<button type="button" onclick="window.alert(5+8);">Window Alert</button>
+	<p></p>
+	
+	<button type="button" onclick="alert(5+10);">Window(not mention) Alert </button>
+	
+	<script>
+		console.log(5+20);
+	</script>
+	<p></p>
+	
+	<button onclick="window.print()">Print This Page</button>
+
+	<p> JavaScript changes the value of the src attribute of an < img > tag.</p>
+
+	<h2>JavaScript Statements</h2>
+
+<p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+
+<p id="one1"></p>
+<p id="two1"></p>
+	<button type="button" onclick="threemyFunction()"> Click Me</button>
+<p id="three1"></p>
+<p id="four1"></p>
+<h2>JavaScript Syntax</h2>
+<p>The JavaScript syntax defines two types of values:
+<br><br>
+    Fixed values<br>
+    Variable values
+<br><br>
+Fixed values are called Literals.
+<br>
+Variable values are called Variables.</p>
+<p id="five1"></p>
+<p id="six1"></p>
+<h3>JavaScript Variables</h3>
+<p>In a programming language, variables are used to store data values.
+<br>
+JavaScript uses the keywords var, let and const to declare variables.
+<br>
+An equal sign is used to assign values to variables.</p>
+<p id="seven1"> </p>
+<p id="eight1"></p>
+<p>The values can be of various types, such as numbers and strings.
+
+For example, "John" + " " + "Doe", evaluates to "John Doe":</p>
+<p id="nine1"></p>
+<p id="ten1"></p>
+<h3>JavaScript Comments</h3>
+<p>
+Not all JavaScript statements are "executed".
+<br><br>
+Code after double slashes // or between /* and */ is treated as a comment.
+<br><br>
+Comments are ignored, and will not be executed:
+</p>
+<p>JavaScript Identifiers
+<br><br>
+Identifiers are names.
+<br>
+In JavaScript, identifiers are used to name variables (and keywords, and functions, and labels).
+<br>
+The rules for legal names are much the same in most programming languages.
+<br>
+In JavaScript, the first character must be a letter, or an underscore (_), or a dollar sign ($).
+<br>
+Subsequent characters may be letters, digits, underscores, or dollar signs.
+<br><br>
+Numbers are not allowed as the first character.<br>
+This way JavaScript can easily distinguish identifiers from numbers.
+</p>
+<h4>All JavaScript identifiers are case sensitive. 
+<br>
+The variables lastName and lastname, are two different variables</h4>
+<p>JavaScript and Camel Case
+<br><br>
+Historically, programmers have used different ways of joining multiple words into one variable name:
+<br><br>
+Hyphens:
+<br>
+first-name, last-name, master-card, inter-city.
+<br><br>
+Hyphens are not allowed in JavaScript. They are reserved for subtractions.
+<br><br>
+Underscore:
+<br>
+first_name, last_name, master_card, inter_city.
+<br><br>
+Upper Camel Case (Pascal Case):
+<br>
+FirstName, LastName, MasterCard, InterCity.
+<br><br>
+Lower Camel Case:
+<br>
+JavaScript programmers tend to use camel case that starts with a lowercase letter:
+<br>
+firstName, lastName, masterCard, interCity.</p>
+<h1>JavaScript Variables</h1>
+<p>There are 3 ways to declare a JavaScript variable:
+<br><br>
+    Using var<br>
+    Using let<br>
+    Using const
+</p>
+<p>
+<br>
+The let keyword was introduced in ES6 (2015).
+<br><br>
+Variables defined with let cannot be Redeclared.
+<br>
+Variables defined with let must be Declared before use.
+<br>
+Variables defined with let have Block Scope.
+</p>
+<p>ES6 introduced two important new JavaScript keywords: let and const.
+<br>
+These two keywords provide Block Scope in JavaScript.<br>Variables declared inside a { } block cannot be accessed from outside the block:</p>
+<p>Variables declared with the var keyword can NOT have block scope.
+<br>
+Variables declared inside a { } block can be accessed from outside the block. </p>
+<p>
+The const keyword was introduced in ES6 (2015).
+<br><br>
+Variables defined with const cannot be Redeclared.
+<br>
+Variables defined with const cannot be Reassigned.
+<br>
+Variables defined with const have Block Scope.
+</p>
+<p>
+When to use JavaScript const?
+<br><br>
+As a general rule, always declare a variable with const unless you know that the value will change.
+<br><br>
+Use const when you declare:
+<br><br>
+    A new Array<br>
+    A new Object<br>
+    A new Function<br>
+    A new RegExp
+
+</p>
+<p>Constant Objects and Arrays
+<br><br>
+The keyword const is a little misleading.
+<br>
+It does not define a constant value. It defines a constant reference to a value.
+<br>
+Because of this you can NOT:
+<br><br>
+    Reassign a constant value<br>
+    Reassign a constant array<br>
+    Reassign a constant object<br>
+<br><br>
+    But you CAN:<br>
+    Change the elements of constant array<br>
+    Change the properties of constant object<br>
+</p>
+<p id="eleven"></p>
+<p id="twelve"></p>
+<p id="thirteen"></p>
+<p id="fourteen"></p>
+<p id="fifteen"></p>
+<p id="sixteen"></p>
+<p id="seventeen"></p>
+<p id="eighteen"></p>
+<h2>JavaScript Arithmetic Operators</h2>
+<p>Arithmetic operators are used to perform arithmetic on numbers:</p>
+
+<table class="ws-table-all notranslate">
+<tbody><tr>
+<th style="width:25%">Operator</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>+</td>
+<td>Addition</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+</tr>
+<tr>
+<td>**</td>
+<td>Exponentiation (<a href="https://www.w3schools.com/js/js_2016.asp">ES2016</a>)</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulus (Division Remainder)</td>
+</tr>
+<tr>
+<td>++</td>
+<td>Increment</td>
+</tr>
+<tr>
+<td>--</td>
+<td>Decrement</td>
+</tr>
+</tbody></table>
+
+<a href="https://www.w3schools.com/js/js_arithmetic.asp">JS Arithmetic</a></strong> chapter.</p>
+</div>
+<hr>
+<h2>JavaScript Assignment Operators</h2>
+<p>Assignment operators assign values to JavaScript variables.</p>
+<table class="ws-table-all notranslate">
+<tbody><tr>
+<th style="width:25%">Operator</th>
+<th>Example</th>
+<th>Same As</th>
+</tr>
+<tr>
+<td>=</td>
+<td>x = y</td>
+<td>x = y</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>x += y</td>
+<td>x = x + y</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>x -= y</td>
+<td>x = x - y</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>x *= y</td>
+<td>x = x * y</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>x /= y</td>
+<td>x = x / y</td>
+</tr>
+  <tr>
+<td>%=</td>
+<td>x %= y</td>
+<td>x = x % y</td>
+  </tr>
+<tr>
+<td>**=</td>
+<td>x **= y</td>
+<td>x = x ** y</td>
+</tr>
+</tbody></table>
+
+
+<p id="nineteen"></p>
+<p id="twenty"></p>
+
+<p>Declaring a constant object does NOT make the objects properties unchangeable:</p>
+	<p id="aone"></p>
+	<h1>JavaScript Operators</h1>
+	<p>Exponentiation : the operation of raising one quantity to the power of another</p>
+	<p id="atwo"></p>
+	<p id="afive"></p>
+	<p id="athree"></p>
+	<h2>JavaScript String Operators</h2>
+<p>The <code>+</code> operator can also be used to add (concatenate) strings.</p>
+<p>The <code>+=</code> assignment operator can also be used to add (concatenate) strings:</p>
+<p>Adding two numbers, will return the sum, but adding a number and a string will return a string:</p>
+	<p id="afour"></p>
+	<p id="asix"></p>
+	<p id="aseven"></p>
+	<h2>JavaScript Comparison Operators</h2>
+
+<table class="ws-table-all notranslate">
+<tbody><tr>
+<th style="width:12%">Operator</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>==</td>
+<td>equal to</td>
+</tr>
+<tr>
+<td>===</td>
+<td>equal value and equal type</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal</td>
+</tr>
+<tr>
+<td>!==</td>
+<td>not equal value or not equal type</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>less than or equal to</td>
+</tr>
+<tr>
+<td>?</td>
+<td>ternary operator</td>
+</tr>
+</tbody></table>
+<h2>JavaScript Logical Operators</h2>
+
+<table class="ws-table-all notranslate">
+<tbody><tr>
+<th style="width:12%">Operator</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>logical and</td>
+</tr>
+<tr>
+<td>||</td>
+<td>logical or</td>
+</tr>
+<tr>
+<td>!</td>
+<td>logical not</td>
+</tr>
+</tbody></table>
+
+	<p id="aeight"></p>
+	<p id="anine"></p>
+	<h2>JavaScript Type Operators</h2>
+
+<table class="ws-table-all notranslate">
+<tbody><tr>
+<th style="width:30%">Operator</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>typeof</td>
+<td>Returns the type of a variable</td>
+</tr>
+<tr>
+<td>instanceof</td>
+<td>Returns true if an object is an instance of an object type</td>
+</tr>
+</tbody></table>
+<h2>JavaScript Bitwise Operators</h2>
+<p>Bit operators work on 32 bits numbers.</p>
+Any numeric operand in the operation is converted into a 32 bit number.
+The result is converted back to a JavaScript number.
+
+<div class="w3-responsive">
+<table class="ws-table-all notranslate">
+<tbody><tr>
+<th style="width:12%">Operator</th>
+<th style="width:25%">Description</th>
+<th>Example</th>
+<th>Same as</th>
+<th>Result</th>
+<th style="width:15%">Decimal</th>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>AND</td>
+<td>5 &amp; 1</td>
+<td>0101 &amp; 0001</td>
+<td>0001</td>
+<td>&nbsp;1</td>
+</tr>
+<tr>
+<td>|</td>
+<td>OR</td>
+<td>5 | 1</td>
+<td>0101 | 0001</td>
+<td>0101</td>
+<td>&nbsp;5</td>
+</tr>
+<tr>
+<td>~</td>
+<td>NOT</td>
+<td>~ 5</td>
+<td>&nbsp;~0101</td>
+<td>1010</td>
+<td>&nbsp;10</td>
+</tr>
+<tr>
+<td>^</td>
+<td>XOR</td>
+<td>5 ^ 1</td>
+<td>0101 ^ 0001</td>
+<td>0100</td>
+<td>&nbsp;4</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>Zero fill left shift</td>
+<td>5 &lt;&lt; 1</td>
+<td>0101 &lt;&lt; 1</td>
+<td>1010</td>
+<td>&nbsp;10</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>Signed right shift</td>
+<td>5 &gt;&gt; 1</td>
+<td>0101 &gt;&gt; 1</td>
+<td>0010</td>
+<td>&nbsp; 2</td>
+</tr>
+<tr>
+<td>&gt;&gt;&gt;</td>
+<td>Zero fill right shift</td>
+<td>5 &gt;&gt;&gt; 1</td>
+<td>0101 &gt;&gt;&gt; 1</td>
+<td>0010</td>
+<td>&nbsp; 2</td>
+</tr>
+</tbody></table>
+</div>
+
+	<p id="aten"></p>
+	<p id="aeleven"></p>
+	<p id="atwelve"></p>
+	<p id="athirteen"></p>
+	<h2>JavaScript Operator Precedence Values</h2>
+
+<div class="w3-panel w3-warning">
+<p>Pale red entries indicates ECMAScript 2015 (ES6) or higher.</p>
+</div>
+
+<table class="ws-table-all">
+ <tbody><tr>
+  <th style="width:10%">Value</th>
+  <th style="width:15%">Operator</th>
+  <th>Description</th>
+  <th>Example</th>
+ </tr>
+ <tr>
+  <td>21</td>
+  <td>( )</td>
+  <td>Expression grouping</td>
+  <td>(3 + 4)</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>20</td>
+  <td>.</td>
+  <td>Member</td>
+  <td>person.name</td>
+ </tr>
+ <tr>
+  <td>20</td>
+  <td>[]</td>
+  <td>Member</td>
+  <td>person["name"]</td>
+ </tr>
+ <tr>
+  <td>20</td>
+  <td>()</td>
+  <td>Function call</td>
+  <td>myFunction()</td>
+ </tr>
+ <tr>
+  <td>20</td>
+  <td>new</td>
+  <td>Create</td>
+  <td>new Date()</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>18</td>
+  <td>++</td>
+  <td>Postfix Increment</td>
+  <td>i++</td>
+ </tr>
+ <tr>
+  <td>18</td>
+  <td>--</td>
+  <td>Postfix Decrement</td>
+  <td>i--</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>17</td>
+  <td>++</td>
+  <td>Prefix Increment</td>
+  <td>++i</td>
+ </tr>
+ <tr>
+  <td>17</td>
+  <td>--</td>
+  <td>Prefix Decrement</td>
+  <td>--i</td>
+ </tr>
+ <tr>
+  <td>17</td>
+  <td>!</td>
+  <td>Logical not</td>
+  <td>!(x==y)</td>
+ </tr>
+ <tr>
+  <td>17</td>
+  <td>typeof</td>
+  <td>Type</td>
+  <td>typeof x</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr class="w3-pale-red">
+  <td>16</td>
+  <td>**</td>
+  <td>Exponentiation (ES2016)</td>
+  <td>10 ** 2</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>15</td>
+  <td>*</td>
+  <td>Multiplication</td>
+  <td>10 * 5</td>
+ </tr>
+ <tr>
+  <td>15</td>
+  <td>/</td>
+  <td>Division</td>
+  <td>10 / 5</td>
+ </tr>
+ <tr>
+  <td>15</td>
+  <td>%</td>
+  <td>Division Remainder</td>
+  <td>10 % 5</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>14</td>
+  <td>+</td>
+  <td>Addition</td>
+  <td>10 + 5</td>
+ </tr>
+ <tr>
+  <td>14</td>
+  <td>-</td>
+  <td>Subtraction</td>
+  <td>10 - 5</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>13</td>
+  <td>&lt;&lt;</td>
+  <td>Shift left</td>
+  <td>x &lt;&lt; 2</td>
+ </tr>
+ <tr>
+  <td>13</td>
+  <td>&gt;&gt;</td>
+  <td>Shift right</td>
+  <td>x &gt;&gt; 2</td>
+ </tr>
+ <tr>
+  <td>13</td>
+  <td>&gt;&gt;&gt;</td>
+  <td>Shift right (unsigned)</td>
+  <td>x &gt;&gt;&gt; 2</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>12</td>
+  <td>&lt;</td>
+  <td>Less than</td>
+  <td>x &lt; y&nbsp;</td>
+ </tr>
+ <tr>
+  <td>12</td>
+  <td>&lt;=</td>
+  <td>Less than or equal</td>
+  <td>x &lt;= y</td>
+ </tr>
+ <tr>
+  <td>12</td>
+  <td>&gt;</td>
+  <td>Greater than</td>
+  <td>x &gt; y</td>
+ </tr>
+ <tr>
+  <td>12</td>
+  <td>&gt;=</td>
+  <td>Greater than or equal</td>
+  <td>x &gt;= y</td>
+ </tr>
+ <tr class="w3-pale-red">
+  <td>12</td>
+  <td>in</td>
+  <td>Property in Object</td>
+  <td>"PI" in Math</td>
+ </tr>
+ <tr class="w3-pale-red">
+  <td>12</td>
+  <td>instanceof</td>
+  <td>Instance of Object</td>
+  <td>instanceof Array</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>11</td>
+  <td>==</td>
+  <td>Equal</td>
+  <td>x == y</td>
+ </tr>
+ <tr>
+  <td>11</td>
+  <td>===</td>
+  <td>Strict equal</td>
+  <td>x === y</td>
+ </tr>
+ <tr>
+  <td>11</td>
+  <td>!=</td>
+  <td>Unequal</td>
+  <td>x != y</td>
+ </tr>
+ <tr>
+  <td>11</td>
+  <td>!==</td>
+  <td>Strict unequal</td>
+  <td>x !== y</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>10</td>
+  <td>&amp;</td>
+  <td>Bitwise AND</td>
+  <td>x &amp; y</td>
+ </tr>
+ <tr>
+  <td>9</td>
+  <td>^</td>
+  <td>Bitwise XOR</td>
+  <td>x ^ y</td>
+ </tr>
+ <tr>
+  <td>8</td>
+  <td>|</td>
+  <td>Bitwise OR</td>
+  <td>x | y</td>
+ </tr>
+ <tr>
+  <td>7</td>
+  <td>&amp;&amp;</td>
+  <td>Logical AND</td>
+  <td>x &amp;&amp; y</td>
+ </tr>
+ <tr>
+  <td>6</td>
+  <td>||</td>
+  <td>Logical OR</td>
+  <td>x || y</td>
+ </tr>
+ <tr>
+  <td>5</td>
+  <td>??</td>
+  <td>Nullish Coalescing</td>
+  <td>x ?? y</td>
+ </tr>
+ <tr>
+  <td>4</td>
+  <td>? :</td>
+  <td>Condition</td>
+  <td>? "Yes" : "No"</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>+=</td>
+  <td>Assignment</td>
+  <td>x += y</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>/=</td>
+  <td>Assignment</td>
+  <td>x /= y</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>-=</td>
+  <td>Assignment</td>
+  <td>x -= y</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>*=</td>
+  <td>Assignment</td>
+  <td>x *= y</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>%=</td>
+  <td>Assignment</td>
+  <td>x %= y</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>&lt;&lt;=</td>
+  <td>Assignment</td>
+  <td>x &lt;&lt;= y</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>&gt;&gt;=</td>
+  <td>Assignment</td>
+  <td>x &gt;&gt;= y</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>&gt;&gt;&gt;=</td>
+  <td>Assignment</td>
+  <td>x &gt;&gt;&gt;= y</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>&amp;=</td>
+  <td>Assignment</td>
+  <td>x &amp;= y</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>^=</td>
+  <td>Assignment</td>
+  <td>x ^= y</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>|=</td>
+  <td>Assignment</td>
+  <td>x |= y</td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr class="w3-pale-red">
+  <td>2</td>
+  <td>yield</td>
+  <td>Pause Function</td>
+  <td>yield x</td>
+ </tr>
+ <tr>
+  <td>1</td>
+  <td>,</td>
+  <td>Comma</td>
+  <td>5 , 6</td>
+ </tr>
+</tbody></table>
+
+<div class="w3-panel w3-note">
+<p>Expressions in parentheses are fully computed before the value is 
+used in the rest of the expression.</p>
+</div>
+
+
+
+
+
+
+
+	<p id="bone"></p>
+	<p id="btwo"></p>
+	<p>Accessing a function without () will return the function definition instead of the function result:</p>
+	<p id="bthree"></p>
+	<p id="bfour"></p>
+	<p id="bfive"></p>
+	<p id="bsix"></p>
+	<p id="bseven"></p>
+	<p id="beight"></p>
+	<p id="bnine"></p>
+	<p id="bten"></p>
+
+
+
+
+
+<button onclick="document.getElementById('demo').innerHTML=Date()"> TIME in P Element </button>
+	<p id="demo"></p>
+
+	<button onclick="this.innerHTML=Date()">Time and Date on Button</button>
+<br>
+	<button onclick="displayDate()"> time</button>
+	<p id="demo123"></p>
+	<p>txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"</p>
+	<p id="ctwo"> </p>
+	<p id="cthree"></p>
+	<p id="cone"></p>
+	<p>var x = "John";   
+	var y = new String("John");
+</p>
+	<p id="cfour"></p>
+	<img src="ecsapecahracters.jpg" width="500px" height="210px">
+	<p>Also note that comparing two JavaScript objects will always return false.</p>
+	<p id="cfive"></p>
+	<p id="csix"></p>
+	<p id="cseven"></p>
+	<p id="ceight"></p>
+	<p id="cnine"></p>
+	<p id="cten"></p>
+	<p id="celeven"></p>
+	<p id="ctwelve"></p>
+	<p id="cthirteen"></p>
+	<p id="cfourteen"></p>
+	<p id="cfifteen"></p>
+	<p id="csixteen"></p>
+	<p id="cseventeen"></p>
+	<p id="ceighteen"></p>
+	<p id="cninteen"></p>
+	<p id="ctwenty"></p>
+	<p id="ctwentyone"></p>
+	<p id="ctwentytwo"></p>
+	<p id="ctwentythree"></p>
+	<p id="ctwentyfour"></p>
+	<p id="ctwentyfive"></p>
+	<p id="ctwentysix"></p>
+	<p id="ctwentyseven"></p>
+	<p id="ctwentyeight"></p>
+	<p id="ctwentynine"></p>
+	<p id="cthirty"></p>
+	<p id="cthirtyone"></p>
+	<p id="cthirtytwo"></p>
+	<p id="cthirtythree"></p>
+	<p id="cthirtyfour"></p>
+	<p id="cthirtyfive"></p>
+
+
+
+
+
+	<p id="done"></p>
+	<p id="dtwo"></p>
+	<p id="dthree"></p>
+	<p id="dfour"></p>
+	<p id="dfive"></p>
+	<p id="dsix"></p>
+	<p id="dseven"></p>
+	<p id="deight"></p>
+	<p>JavaScript will try to convert strings to numbers in all numeric operations: </p>
+	<p>var x = "100";
+		<br>var y = "10";</p>
+	<p id="dnine"></p>
+	<p id="dten"></p>
+	<p id="deleven"></p>
+	<p>NaN - Not A Number</p>
+	<p id="dtwelve"></p>
+	<p id="dthirteen"></p>
+	<p id="dfourteen"></p>
+	<p id="dfifteen"></p>
+	<p id="dsixteen"></p>
+	<p id="dseventeen"></p>
+	<p id="deighteen"></p>
+	<p>JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x :</p>
+	<p id="dninteen"></p>
+	<p>you can use the toString() method to output numbers from base 2 to base 36.
+	Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.</p>
+	<p id="dtwenty"></p>
+	<p id="dtwentyone"></p>
+	<p>Comparing two JavaScript objects will always return false.</p>
+	<p id="dtwentytwo"></p>
+	<p id="dtwentythree"></p>
+	<p id="dtwentyfour"></p>
+	<p id="dtwentyfive"></p>
+	<p id="dtwentysix"></p>
+	<p id="dtwentyseven"></p>
+	<p id="dtwentyeight"></p>
+	<p id="dtwentynine"></p>
+	<p>Number()method : </p>
+	<p id="dthirty"></p>
+	<p id="dthirtyone"></p>
+	<p>parseInt() Method :</p>
+	<p id="dthirtytwo"></p>
+	<p>parseFloat() Method :</p>
+	<p id="dthirtythree"></p>
+	<p>Number Properties :<br>
+		These properties can only be accessed as Number.MAX_VALUE.<br>Using myNumber.MAX_VALUE, where myNumber is a variable, expression, or value, will return undefined</p>
+	<p id="dthirtyfour"></p>
+	<p id="dthirtyfive"></p>
+
+
+
+
+
+
+
+	<p id="1"></p>
+	<p id="2"></p>
+	<p id="3"></p>
+	<p id="4"></p>
+	<p>you can have variables of different types in the same Array.
+	You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array</p>
+
+	<p id="5"></p>
+	<p id="6"></p>
+	<p>You can also use the Array.forEach() function: </p>
+	<p id="7"></p>
+	<p id="8"></p>
+	<p id="9"></p>
+	<p id="10"></p>
+	<p id="11"></p>
+	<p id="12"></p>
+		<p> ArrayName.constructor.toString().indexOf(Array)>-1 is one type method</p>
+
+	<p id="13"></p>
+	<p>ArrayName instanceof Array is a method :</p>
+
+	<p id="14"></p>
+	<p id="15"></p>
+	<p id="16"></p>
+	<p id="17"></p>
+	<p id="18"></p>
+	<p id="19"></p>
+	<p id="20"></p>
+	<p id="21"></p>
+	<p id="22"></p>
+	<p>Using delete may leave undefined holes in the array. Use pop() or shift() instead.</p>
+	<p id="23"></p>
+	<p id="24"></p>
+	<p id="25"></p>
+	<p id="26"></p>
+	<p>The concat() method does not change the existing arrays. It always returns a new array.</p>
+
+	<p id="27"></p>
+	<p>The slice() method creates a new array. It does not remove any elements from the source array.</p>
+	<p id="28"></p>
+	<p id="29"></p>
+
+
+
+
+
+
+
+
+
+
+	<p>Alphabetical Sort : </p>
+	<p id="e1"></p>
+	<p id="e2"></p>
+	<p>Numeric Sort : </p>
+	<p id="e3"></p>
+	<p id="e4"></p>
+	<p>array.sort(), is not accurate, it will favor some numbers over the others.
+
+	The most popular correct method, is called the Fisher Yates shuffle</p>
+	<button type="button" onclick="e5myFunction()"> Random Number</button>
+	<p> Random Array Sorting : 
+ </p>
+	<p id="e5"></p>
+	<button type="button" onclick="e6myFunction1()" >Fisher Yates Random Method </button>
+	<p id="e6"></p>
+	<p>Object Sort Numeric properties :MAX AND MIN</p>
+	<p id="e77"></p>
+	<button onclick="e7myFunction2()">Object Sort string properties :</button>
+	<p id="e7"></p>
+	<button onclick="e8myFunction3()">Object Sort string properties :</button>
+
+	<p id="e8"></p>
+	<p>Array.forEach() Method :<br>
+	The forEach() method calls a function (a callback function) once for each array element.</p>
+
+	<p id="e9"></p>
+	<p id="e10"></p>
+	<p>Array.map() Method : <br>
+	The map() method creates a new array by performing a function on each array element.<br>
+
+	The map() method does not execute the function for array elements without values.<br>
+
+	The map() method does not change the original array.<br>
+
+	This example multiplies each array value by 2: </p>
+	<p id="e11"></p>
+	
+	<p id="e12"></p>
+	<p>Array.filter() Method : <br>
+	The filter() method creates a new array with array elements that passes a test.<br>
+
+	This example creates a new array from elements with a value larger than 18:
+	</p>
+	<p id="e13"></p>
+	<p>Array.reduce() Method :<br>
+	The reduce() method runs a function on each array element to produce (reduce it to) a single value.<br>
+
+	The reduce() method works from left-to-right in the array. See also reduceRight().<br>
+
+	The reduce() method does not reduce the original array.<br>
+
+	This example finds the sum of all numbers in an array:</p>
+	<p id="e14"></p>
+	<p>Array.reduceRight() Method : <br>
+	The reduceRight() works from right-to-left in the array.</p>
+	<p id="e15"></p>
+	<p>Array.every() Method : <br>
+	The every() method check if all array values pass a test.<br>
+
+	This example check if all array values are larger than 18: </p>
+	<p id="e16"></p>
+	<p>Array.some() Method : <br>
+	The some() method check if some array values pass a test.</p>
+	<p id="e17"></p>
+	Array.indexOf() Method : <br>
+	
+	The indexOf() method searches an array for an element value and returns its position.
+	<p id="e18"></p>
+	<p>Array.find() Method :<br>
+	The find() method returns the value of the first array element that passes a test function.<br>
+
+	This example finds (returns the value of) the first element that is larger than 18: </p>
+	<p id="e19"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="f1"></p>
+	<p id="f2"></p>
+	<p id="f3"></p>
+	<p id="f4"></p>
+	<p id="f5"></p>
+	<p id="f6"></p>
+	<p id="f7"></p>
+	<p>You cannot omit month. If you supply only one parameter it will be treated as milliseconds.</p>
+	<p id="f8"></p>
+	<p>One and two digit years will be interpreted as 19xx: </p>
+	<p id="f9"></p>
+	<p id="f10"></p>
+	<p id="f11"></p>
+	<p id="f12"></p>
+	<p id="f13"></p>
+	<p id="f14"></p>
+	<p id="f15"></p>
+	<p id="f16"></p>
+	<p id="f17"></p>
+	<p id="f18"></p>
+	<p id="f19"></p>
+	<p id="f20"></p>
+	<p id="f21"></p>
+	<p id="f22"></p>
+	<p id="f23"></p>
+	<p id="f24"></p>
+	<p id="f25"></p>
+
+
+
+
+
+
+
+
+
+
+	<p id="g1"></p>
+	<p id="g2"></p>
+	<p id="g3"></p>
+	<p id="g4"></p>
+	<p id="g5"></p>
+	<p id="g6"></p>
+	<p id="g7"></p>
+	<p id="g8"></p>
+	<button onclick="document.getElementById('9').innerHTML = getRndInteger(0,10) ">click for Random Number 0 to 9  </button>
+	<p id="g9"></p>
+	<button onclick="document.getElementById('10').innerHTML =getRndInteger1(0,10) ">click for Random Number 0 to 10  </button>
+	<p id="g10"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="h1"></p>
+	<p id="h2"></p>
+	<p>Everything With a "Value" is True.</p>
+	<p id="h3"></p>
+	<p>Everything Without a "Value" is False.</p>
+	<p id="h4"></p>
+	<p id="h5"></p>
+	<p id="h6"></p>
+	<p id="h7"></p>
+	
+	<p>Input your age and click the button:</p>
+	<input id="age1" value="18" />
+	<button onclick="h8myFunction()">Try it</button>
+	<p id="h8"></p>
+	<p id="h9"></p>
+
+	<p>Input your age and click the button:</p>
+
+	<input id="age" value="18" />
+
+	<button onclick="h10myFunction()">Try it</button>
+	<p id="h10"></p>
+	<p id="h11"></p>
+	<p id="h12"></p>
+	<p>Switch Method : <br>
+	If multiple cases matches a case value, the first case is selected.<br>
+
+	If no matching cases are found, the program continues to the default label.<br>
+
+	If no default label is found, the program continues to the statement(s) after the switch.<br>
+
+	</p>
+	<p id="h13"></p>
+	<p>Switch cases use strict comparison (===).</p>
+	<p id="h14"></p>
+	<p> For Loop : <br>
+	Statement 1 : <br>
+	This is not always the case, JavaScript doesn't care. Statement 1 is optional.<br>
+
+	You can initiate many values in statement 1<br>
+
+	And you can omit statement 1 (like when your values are set before the loop starts):<br>
+
+	Statement 2 : <br>  
+
+	This is not always the case, JavaScript doesn't care. Statement 2 is also optional.<br>
+
+	If statement 2 returns true, the loop will start over again, if it returns false, the loop will end.<br>
+
+	Statement 3 :<br>
+
+	This is not always the case, JavaScript doesn't care, and statement 3 is optional.<br>
+
+
+	Statement 3 can do anything like negative increment (i--), positive increment (i = i + 15), or anything else.<br>
+
+	Statement 3 can also be omitted (like when you increment your values inside the loop):<br>
+
+	For Loop : <br>
+
+		</p>
+	<p id="h15"></p>
+	<p id="h16"></p>
+	<p>The JavaScript for in statement loops through the properties of an Object: </p>
+	<p id="h17"></p>
+	<p>The JavaScript for in statement can also loop over the properties of an Array: </p>
+	<p id="h18"></p>
+	<p>The forEach() method calls a function (a callback function) once for each array element.</p>
+	<p id="h19"></p>
+	<p id="h20"></p>
+	<p id="h21"></p>
+	<p id="h22"></p>
+	<p id="h23"></p>
+	<p id="h24"></p>
+	<p id="h25"></p>
+	<p id="h26"></p>
+	<p id="h27"></p>
+	<p id="h28"></p>
+	<p>JavaScript Labels : <br>
+	To label JavaScript statements you precede the statements with a label name and a colon:<br>
+	Syntax : <br>
+	label:<br>
+	statements</p>
+	<p id="h29"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p>In JavaScript there are 5 different data types that can contain values:<br>
+
+	string<br>
+	number<br>
+	boolean<br>
+	object<br>
+	function<br><br>
+	There are 6 types of objects:<br>
+
+	Object<br>
+	Date<br>
+	Array<br>
+	String<br>
+	Number<br>
+	Boolean<br><br>
+	And 2 data types that cannot contain values:<br>
+
+	null<br>
+	undefined<br></p>
+	<p id="i1"></p>
+	<p id="i2"></p>
+	<p id="i3"></p>
+	<p id="i4"></p>
+	<p id="i5"></p>
+	<p id="i6"></p>
+	<p id="i7"></p>
+	<p id="i8"></p>
+	<p id="i9"></p>
+	<p id="i10"></p>
+	<p id="i11"></p>
+	<p>Number Method () : <br>
+	The global method Number() can convert strings to numbers.<br>
+
+	Strings containing numbers (like "3.14") convert to numbers (like 3.14).<br>
+
+	Empty strings convert to 0.<br>
+
+	Anything else converts to NaN (Not a Number).<br></p>
+	<p id="i12"></p>
+	<p id="i13"></p>
+	<p id="i14"></p>
+	<p id="i15"></p>
+	<p id="i16"></p>
+	<p id="i17"></p>
+	<p id="i18"></p>
+	<img src="typeconversions.jpg">
+	<p id="i19"></p>
+	<p id="i20"></p>
+	<p id="i21"></p>
+	<p id="i22"></p>
+	<p id="i23"></p>
+	<p id="i24"></p>
+	<p id="i25"></p>
+	<p id="i26"></p>
+	<p id="i27"></p>
+	<p id="i28"></p>
+	<p id="i29"></p>
+	<p id="i30"></p>
+	<p id="i31"></p>
+	<p id="i32"></p>
+	<p id="i33"></p>
+	<p id="i34"></p>
+	<p id="i35"></p>
+	<p id="i36"></p>
+	<p id="i37"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="j1"></p>
+	
+	<p>Please input a number between 5 and 10:</p>
+	<input id="in" type="text">
+	<button type="button" onclick="j2myFunction()">Test Input</button>
+	<p id="j2"></p>
+	<p id="j3"></p>
+	<p id="j4"></p>
+	<p id="j5"></p>
+	<p id="j6"></p>
+	<p id="j7"></p>
+	<p>If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable : </p>
+	<p id="j8"></p>
+	<p>Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope. </p>
+	<p id="j9"></p>
+	<p id="j10"></p>
+	<p id="j11"></p>
+	<p id="j12"></p>
+	<p>It has different values depending on where it is used:<br>
+
+	In a method, this refers to the owner object.<br>
+	Alone, this refers to the global object.<br>
+	In a function, this refers to the global object.<br>
+	In a function, in strict mode, this is undefined.<br>
+	In an event, this refers to the element that received the event.<br>
+	Methods like call(), and apply() can refer this to any object.</p>
+	<p id="j13"></p>
+	<button onclick="this.style.display='none'">Click to Remove Me!</button>
+	<p id="j14"></p>
+	<p id="j15"></p>
+	<p id="j16"></p>
+	<p id="j17"></p>
+	<p>JavaScript Arrow Function : <br>This example shows the syntax of an Arrow Function, and how to use it.</p>
+	<p id="j18"></p>
+	<p id="j19"></p>
+	<p id="j20"></p>
+	<p id="j21"></p>
+	<button id="btn">Click Me!</button>
+	<p id="j22"></p>
+	<button id="btn1">Click Me!</button>
+	<p id="j23"></p>
+	<p>How to use a JavaScript Class.</p>
+	<p id="j24"></p>
+	<p>How to define and use a Class method.</p>
+	<p id="j25"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="k1"></p>
+	<p id="k2"></p>
+	<p id="k3"></p>
+	<p id="k4"></p>
+	<p id="k5"></p>
+	<p id="k6"></p>
+	<p id="k7"></p>
+	<p id="k8"></p>
+	<p id="k9"></p>
+	<p id="k10"></p>
+	<p id="k11"></p>
+	<p id="k12"></p>
+	<p>If you expect to access a DOM element several times, access it once, and the use it as a local variable:</p>
+
+	<p id="k13"></p>
+	<img src="jsreservedwords.jpg">
+	<img src="jsreservedwords1.jpg">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p>Types of Creating Object : <br><br>
+		Using an Object Literal <br>
+		An object literal is a list of name:value pairs (like age:50) inside curly braces {}.<br>
+		This example creates an empty JavaScript object, and then adds 4 properties:<br>
+	</p>
+	<p id="l1"></p>
+	<p>Using the JavaScript Keyword new : <br><br>
+		The following example create a new JavaScript object using new Object(), and then adds 4 properties:<br>
+	</p>
+	<p id="l2"></p>
+	<p>JavaScript Objects are Mutable : <br><br>
+	Objects are mutable: They are addressed by reference, not by value.<br>
+	The object x is not a copy of person. It is person. Both x and person are the same object.<br>
+	Any changes to x will also change person, because x and person are the same object.<br>
+	</p>
+	<p id="l3"></p>
+	<p>Accessing JavaScript Properties : <br>
+	example 1 : <br></p>
+
+	<p id="l4"></p>
+	<p>Example 2 : </p>
+	<p id="l5"></p>
+	<p>JavaScript for...in Loop : </p>
+	<p id="l6"></p>
+	<p>Adding New Properties and Deleting Properties : </p>
+	<p id="l7"></p>
+	<p>Nested Objects : <br>
+	Values in an object can be another object: <br>
+	</p>
+	<p id="l8"></p>
+	<p>Nested Arrays and Objects : <br><br>
+	Values in objects can be arrays, and values in arrays can be objects:<br>
+	</p>
+	<p id="l9"></p>
+	<p id="l10"></p>
+	<h3>JavaScript Object Methods</h3>
+	<p id="l11"></p>
+	<p>Adding a Method to an Object : </p>
+	<p id="l12"></p>
+	<h3>JavaScript Display Objects</h3>
+	<p id="l13"></p>
+	<h3>Using JSON.stringify() : </h3>
+	<p id="l14"></p>
+	<p>JavaScript Object Accessors<br>
+	JavaScript Getter (The get Keyword) : </p>
+	<p id="l15"></p>
+	<p>JavaScript Setter (The set Keyword) : </p>
+	<p id="l16"></p>
+	<p>Differences between JavaScript Function or Getter : </p>
+	<p id="l17"></p>
+	<p>JavaScript Object Constructors : </p>
+	<p id="l18"></p>
+	<p id="l19"></p>
+
+
+	<h3>Managing Objects : </h3>
+	<p>// Create object with an existing object as prototype<br>
+	Object.create()<br><br>
+	// Adding or changing an object property<br>
+	Object.defineProperty(object, property, descriptor)<br><br>
+	// Adding or changing object properties<br>
+	Object.defineProperties(object, descriptors)<br><br>
+	// Accessing Properties<br>
+	Object.getOwnPropertyDescriptor(object, property)<br><br>
+	// Returns all properties as an array<br>
+	Object.getOwnPropertyNames(object)<br><br>
+	// Accessing the prototype<br>
+	Object.getPrototypeOf(object)<br><br>
+	// Returns enumerable properties as an array<br>
+	Object.keys(object)<br></p>
+	
+
+	<h3>Protecting Objects : </h3>
+	<p>// Prevents adding properties to an object<br>
+	Object.preventExtensions(object)<br><br>
+	// Returns true if properties can be added to an object<br>
+	Object.isExtensible(object)<br><br>
+	// Prevents changes of object properties (not values)<br>
+	Object.seal(object)<br><br>
+	// Returns true if object is sealed<br>
+	Object.isSealed(object)<br><br>
+	// Prevents any changes to an object<br>
+	Object.freeze(object)<br><br>
+	// Returns true if object is frozen<br>
+	Object.isFrozen(object)<br><br></p>
+
+	<p id="l20"></p>
+	<p id="l21"></p>
+	<h3>Changing Meta Data : </h3>
+	<p>writable : true  &emsp;    // Property value can be changed<br><br>
+	enumerable : true&emsp;// Property can be enumerated<br><br>
+	configurable : true&emsp;// Property can be reconfigured<br><br>
+	writable : false  &emsp;   // Property value can not be changed<br><br>
+	enumerable : false&emsp;// Property can be not enumerated<br><br>
+	configurable : false&emsp;// Property can be not reconfigured<br></p>
+	<h3>JavaScript Map Objects : </h3>
+	<p id="l22"></p>
+	<p id="l23"></p>
+	<p>A Map object holds key-value pairs where the keys can be any datatype.<br>
+
+	A Map object remembers the original insertion order of the keys.<br>
+
+	A Map object has a property that represents the size of the map.<br><br>
+
+	Essensial Map() Methods : <br><br>
+	new Map()&emsp;	Creates a new Map object<br>
+	set()&emsp;	&emsp;Sets a value for a key in a Map object<br>
+	get()&emsp;	&emsp;Gets a value for a key in a Map object<br>
+	entries()	&emsp;Returns an array of the key/value pairs in a Map object<br>
+	keys()&emsp;&emsp;	Returns an array of the keys in a Map object<br>
+	values()&emsp;	Returns an array of the values in a Map object<br><br>
+	Map() Properties<br><br>
+	size&emsp;	Gets a value for a key in a Map object<br><br>
+	Other Map() Methods : <br><br>
+	clear()&emsp;	Removes all elements in a Map<br>
+	delete()&emsp;	Removes an element specified by a key.<br>
+	has()&emsp;	Returns true if a key exists.<br>
+	forEach()&emsp;	Invokes a callback for each key/value pair.<br>
+</p>
+	<p>JavaScript Set Objects : </p>
+	<p>Create a Set and add existing variables :  </p>
+	<p id="l24"></p>
+	<p>Create a Set and add literal values : </p>
+	<p id="l25"></p>
+	<p>Pass an Array to the new Set() constructor : </p>
+	<p id="l26"></p>
+	<p id="l27"></p>
+	<p id="l28"></p>
+	<p id="l29"></p>
+
+	<p>Set Object Methods and Properties : <br><br>
+	new Set()&emsp;	Creates a new Set object<br>
+	add()&emsp;	Adds a new element to the Set<br>
+	clear()&emsp;	Removes all elements from a Set<br>
+	delete()&emsp;	Removes an element specified by its value.<br>
+	entries()&emsp;	Returns an array of the values in a Set object<br>
+	has()&emsp;&emsp;	Returns true if a value exists<br>
+	forEach()&emsp;	Invokes a callback for each element<br>
+	keys()&emsp;&emsp;	Returns an array of the values in a Set object<br>
+	values()&emsp;	Same as keys()<br>
+	size&emsp;&emsp;	Returns the element count<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="m1"></p>
+	<p>The Function() Constructor : </p>
+	<p id="m2"></p>
+	<p>Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope.<br>
+
+	Hoisting applies to variable declarations and to function declarations.</p>
+	<p id="m3"></p>
+	<p id="m4"></p>
+	<p id="m5"></p>
+	<p id="m6"></p>
+	<p id="m7"></p>
+	<p id="m8"></p>
+	<h3>JavaScript Function Parameters : </h3>
+	<p>If a function is called with missing arguments (less than declared), the missing values are set to undefined.</p>
+	<p id="m9"></p>
+	<p>JavaScript functions have a built-in object called the arguments object.<br>
+
+	The argument object contains an array of the arguments used when the function was called (invoked).</p>
+	<p id="m10"></p>
+	<h3>JavaScript Function Invocation : </h3>
+	<p id="m11"></p>
+	<p id="m12"></p>
+	<p id="m13"></p>
+	<h3>JavaScript Function Call : </h3>
+	<p>With the call() method, you can write a method that can be used on different objects.<br>
+	With call(), an object can use a method belonging to another object.<br>
+	</p>
+	<p id="m14"></p>
+	<p id="m15"></p>
+	<h3>JavaScript Closures : </h3>
+	<p id="m16"></p>
+	<p id="m17"></p>
+	<button type="button" onclick="m18myFunction8()">Count!</button>
+	<p id="m18">0</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="n1"></p>
+	<p id="n2"></p>
+	<p id="n3"></p>
+	<p id="n4"></p>
+	<p id="n5"></p>
+	<p>Unlike functions, and other JavaScript declarations, class declarations are not hoisted.<br>
+
+	That means that you must declare a class before you can use it:</p>
+	<p>Static class methods are defined on the class itself.<br>
+
+	You cannot call a static method on an object, only on an object class.<br>
+	You can call 'hello()' on the Car Class:
+	</p>
+	<p id="n6"></p>
+	<p>But NOT on  a Car Object:</p>
+	<p id="n7"></p>
+	<p>If you want to use the myCar object inside the static method, you can send it as a parameter : </p>
+	<p id="n8"></p>
+	<p id="n9"></p>
+	<p id="n10"></p>
+	<p id="n11"></p>
+	<p id="n12"></p>
+	<h1 id="n111"></h1>
+	<h1 id="n112"></h1>
+	<h1 id="n113"></h1>
+	<h1 id="n1133"></h1>
+	<p id="n13"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="o1"></p>
+	<p id="o2"></p>
+	<p id="o3"></p>
+	<p id="o4"></p>
+	<p id="o5"></p>
+	<p id="o6"></p>
+	<p id="o7"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p>The DOM is a W3C (World Wide Web Consortium) standard.<br><br>
+
+The DOM defines a standard for accessing documents:<br><br>
+
+"The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."<br><br>
+
+The W3C DOM standard is separated into 3 different parts:<br><br>
+
+Core DOM - standard model for all document types
+XML DOM - standard model for XML documents
+HTML DOM - standard model for HTML documents<br><br>
+What is the HTML DOM?<br><br>
+The HTML DOM is a standard object model and programming interface for HTML. It defines:<br><br>
+
+The HTML elements as objects<br>
+The properties of all HTML elements<br>
+The methods to access all HTML elements<br>
+The events for all HTML elements<br><br>
+In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.</p>
+<div id="DIV">
+	<p id="p1"></p>
+	<p id="p2">HI</p>
+	<p id="p3">HI1</p>
+	<img src="HTMLDOMDocument.jpg">
+	<div id="main">
+	<p>Finding HTML Elements by Tag Name</p>
+	<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+	</div>
+
+	<p id="pdemo"></p>
+	<p class="intro">Hello World!</p>
+	<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+	<p id="demo1"></p>
+
+	<p id="p4">HI2</p>
+	<form id="frm1">
+  	First name: <input type="text" name="fname" value="Donald"><br>
+  	Last name: <input type="text" name="lname" value="Duck"><br><br>
+  	<input type="submit" value="Submit">
+	</form> 
+
+	<p id="p5">HI3</p>
+	<img id="image" width=700px height=450px>
+	<p id="p6">HI4</p>
+
+	<form name="myForm" onsubmit="return validateForm()" >
+	  	Name: <input type="text" name="fname" required="required">
+  			<input type="submit" value="Submit">
+	</form>
+
+	<p>Please input a number between 1 and 10 </p>
+	<input id="numb">
+	<button type="button" onclick="p7myFunction()">Submit</button>
+
+	<p id="p7"></p>
+	<p id="p11">
+	This is atext.
+	This is a text.
+	This is a text.
+	This is a text.
+	</p>
+
+	<input type="button" value="Hide text" onclick="document.getElementById('p11').style.visibility='hidden'">	
+	<input type="button" value="Show text" onclick="document.getElementById('p11').style.visibility='visible'">
+<style>
+	#container{
+		width: 400px;
+		height: 400px;
+		position: relative;
+		background: yellowgreen;
+	}
+	#animate{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		background-color: red;
+	}
+</style>
+<p><button onclick="myMove()">Click Me</button></p>
+
+<div id="container">
+	<div id="animate"></div>
+</div>
+
+<h2>JavaScript HTML Events</h2>
+<h2 onclick="this.innerHTML='Ooops!'" onmouseover="style.color = 'red'" onmouseout="style.color = 'lightgreen'" >Click on this text!</h2>
+
+<button id="myBtn">Try it to Dispaly Date</button>
+
+
+	<p id="p8">HI6</p>
+	<p id="p9">HI7</p>
+
+Enter your Name : <input type="text" id="fname" 
+onchange="upperCase()" onfocus="FOCUS(this)">
+	<p id="p10">HI8</p>
+</div>
+	<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: #D94B38; width:115px; height: 20px; padding: 20px;">
+		Mouse Over Here
+	</div>
+<br>
+	<div onmousedown = "mDown(this)" onmouseup = "mUp(this)" style = "background-color: #D99A38; width:90px; height: 20px; padding: 20px;">Click Me</div>
+	<br>
+
+	<button id="myBtn1"> Click </button>
+	<p id="p11"></p>
+	<p>Window Resize Random Number</p>
+	<p id="p12"></p>
+	
+	<style>
+	#myDiv1, #myDiv2 {
+	  background-color: coral;
+	  padding: 35px;
+	  width: 150px;
+	  height: 100px;
+	}
+
+	#myP1, #myP2 {
+	  background-color: white; 
+	  font-size: 20px;
+	  border: 1px solid;
+	  padding: 12px;
+	  width: 80px;
+	  height: 20px;
+	}
+	</style>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	
+	<div id="myDiv1">
+  	<h2>Bubbling:</h2>
+  	<p id="myP1">Click me!</p>
+	</div><br>
+
+	<div id="myDiv2">
+  	<h2>Capturing:</h2>
+  	<p id="myP2">Click me!</p>
+	</div>
+	<br>
+
+	<style>
+	#myDIV3 {
+	  background-color: coral;
+	  border: 1px solid;
+	  padding: 50px;
+	  color: white;
+	  font-size: 20px;
+	}
+	</style>
+
+	<div id="myDIV3">
+	  <p>This div element has an onmousemove event handler that displays a random number every time you move your mouse inside this orange field.</p>
+	  <p>Click the remove button to remove the div's event handler.</p>
+	  <p>Click the add button to add the div's event handler.</p>
+	  <button onclick="removeHandler()" id="myBtn">Remove</button>
+	  <button onclick="addHandler()"> Add </button>
+	</div>
+
+	<p id="p13"></p>
+	<p id="p14">Commented This in Javascript </p>
+	<p id="p15">Commented This in Javascript </p>
+	<p id="p16"></p>
+	<p id="p17"></p>
+
+	<p>Creating HTML Element in Javascript</p>
+	<div id="div1">
+		<p id="p11">This is a Paragraph</p>
+		<p id="p2">This is another Paragraph</p>
+	</div>
+	<p>Removed 18 p Element </p>
+	<p id="p18"> Removing Element</p>
+	<p id="p19"></p>
+	<button onclick="colorChange()"> Color change Elements </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="q1"></p>
+	
+	<button onclick="open()"> Window Open </button><br><br>
+	
+	<button onclick="close()"> Window Close </button><br><br>
+	
+	<button onclick="move()"> Window Move </button><br><br>
+	
+	<button onclick="resize()"> Window Resize </button><br><br>
+	
+	<h2> Window Screen </h2>
+	<p id="q2"></p>
+	
+	<h2> Window Location </h2>
+	<p id="q3"></p>
+	<button onclick="newDoc()"> W3Schools </button>
+	
+	<h2> Windows History </h2>
+	<button onclick="goBack()">Go Back</button><br><br>
+	
+	<button onclick="goForward()"> Go Forward </button>
+	
+	<h2> Window Navigator </h2>
+	<p id="q4"></p>
+	
+	<h2> Popup Boxes </h2>
+	
+	<button onclick="ALERT()"> Alert </button>
+	<br><br>
+	
+	<button onclick="confirmation()"> Confirmation</button><br><br>
+	
+	<button onclick="PROMPT()"> Prompt </button>
+	<p id="q5"></p>
+	<p id="q6"></p>
+	
+	<h2> Timing Events </h2>
+
+	<button onclick="myVar = setTimeout(settimeout, 6000)"> Set Time Out </button>
+	&emsp;
+	
+	<button onclick="clearTimeout(myVar)"> Stop Set Time Out It</button>
+
+	<p id="q7"></p>
+	<p id="q8"></p>
+	<button onclick="clearInterval(myVar1)"> Stop Time </button>
+	
+	<p id="q9"></p>
+	
+	<p id="q10"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<button onclick="getLocation()"> Get Location </button>
+	<p id="r1"></p>
+	
+	<h2> Validaton API </h2>
+	<p>Enter a number between 100 to 300 and click OK:</p>
+
+	<input id="id1" type="number" min="100" max="300" required>
+	<button onclick="rmyFunction()"> OK </button>
+	<p id="r2"></p>
+	<br>
+
+	<p>Enter a number below 100 and click OK:</p>
+	<input id="id2" type="number" max="100">
+	<button onclick="rmyFunction5()">OK</button>
+	<p id="r3"></p>
+	<br>
+
+	<p>Enter a number and click OK:</p>
+	<input id="id3" type="number" min="100">
+	<button onclick="rmyFunction2()">OK</button>
+	<p id="r4"></p>
+
+	<h2> History API </h2>
+	<button onclick="rmyFunction3()"> History back 2 </button>
+	<p id="r5"></p>
+	
+	<h2>Storage API</h2>
+	
+	<p><h4>The localStorage Object</h4>
+	The localStorage object provides access to a local storage for a particular Web Site. It allows you to store, read, add, modify, and delete data items for that domain.<br>
+
+	The data is stored with no expiration date, and will not be deleted when the browser is closed.<br>
+
+	The data will be available for days, weeks, and years.<br>
+	</p>
+	<p id="r6"></p>
+
+	<p><h4>The sessionStorage Object</h4>
+	The sessionStorage object is identical to the localStorage object.<br>
+
+	The difference is that the sessionStorage object stores data for one session.<br>
+
+	The data is deleted when the browser is closed.
+	</p>
+	<p id="r7"></p>
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<h1>See Consloe Also</h1>
+	<p>When you write something inside ${} in a template literal, its result will be
+	computed, converted to a string, and included at that position.</p>
+	<p id="eq1"></p>
+	<p>There is only one value in JavaScript that is not equal to itself, and that is
+	NaN</p>
+	<p>The rules for converting strings and numbers to Boolean values state
+	that 0, NaN, and the empty string ("") count as false
+	</p>
+	<p>So 0 || -1 produces -1, and "" || "!?" yields "!?".</p>
+	<p>The function Number converts a value to a number. We need that conversion
+	because the result of prompt is a string value, and we want a number.</p>
+	<p>The Number.isNaN function is a standard JavaScript function that returns
+	true only if the argument it is given is NaN</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		function checkCookies(){
+  var text = "";
+  if ( navigator.cookieEnaled == true ) {
+    text = "Cookies are enabled.";
+  } else {
+    text = "Cookies are not enabled.";
+  }
+
+document.getElementById("p9").innerHTML = text;
+}
+
+</script>
+
+
+
+
+<script src="Jsjsjs.js"></script>
+
+
+</body>
+</html>
